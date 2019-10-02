@@ -1,0 +1,27 @@
+{
+  "name": "monstown-plugin",
+  "version": "1.0.0",
+  "description": "WP plugin for monstown.com",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasagar/monstown-plugin.git"
+  },
+  "author": "4410 aka sasagar",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/sasagar/monstown-plugin/issues"
+  },
+  "homepage": "https://github.com/sasagar/monstown-plugin#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^6.0.2",
+    "webpack": "^4.41.0"
+  }
+}
