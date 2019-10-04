@@ -24,3 +24,17 @@ function monstown_enqueue_block_editor_assets() {
 		filemtime( plugin_dir_path( __FILE__ ) . 'css/style.css' )
 	);
 }
+
+add_filter( 'block_categories', 'monstown_block_category', 10, 2 );
+
+function monstown_block_category( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug'  => 'monstown-blocks',
+				'title' => 'MONSTOWN専用',
+			),
+		)
+	);
+}

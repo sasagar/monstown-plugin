@@ -2,15 +2,15 @@ module.exports = {
   entry: "./block.js", // ビルド前
   output: {
     path: __dirname,
-    filename: "block.build.js" // ビルド後
+    filename: "block.build.js", // ビルド後
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /.js$/,
         loader: "babel-loader",
-        exclude: /node_modules/
-      }
-    ]
-  }
+        exclude: /node_modules/,
+      },
+    ],
+  },
 };

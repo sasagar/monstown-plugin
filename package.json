@@ -1,27 +1,51 @@
 {
-  "name": "monstown-plugin",
-  "version": "1.0.0",
-  "description": "WP plugin for monstown.com",
-  "main": "index.js",
-  "scripts": {
-    "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sasagar/monstown-plugin.git"
-  },
-  "author": "4410 aka sasagar",
-  "license": "GPL-2.0+",
-  "bugs": {
-    "url": "https://github.com/sasagar/monstown-plugin/issues"
-  },
-  "homepage": "https://github.com/sasagar/monstown-plugin#readme",
-  "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "cross-env": "^6.0.2",
-    "webpack": "^4.41.0"
-  }
+    "name": "monstown-plugin",
+    "version": "1.0.0",
+    "description": "WP plugin for monstown.com",
+    "main": "index.js",
+    "scripts": {
+        "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack --mode development --open"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sasagar/monstown-plugin.git"
+    },
+    "author": "4410 aka sasagar",
+    "license": "GPL-2.0+",
+    "bugs": {
+        "url": "https://github.com/sasagar/monstown-plugin/issues"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,jsx}": [
+            "eslint --fix",
+            "git add"
+        ]
+    },
+    "homepage": "https://github.com/sasagar/monstown-plugin#readme",
+    "dependencies": {
+        "@babel/core": "^7.6.2",
+        "@babel/preset-env": "^7.6.2",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.0.6",
+        "babel-plugin-transform-react-jsx": "^6.24.1",
+        "cross-env": "^6.0.3",
+        "webpack": "^4.41.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.3",
+        "eslint": "^6.5.1",
+        "eslint-config-prettier": "^6.3.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-react": "^7.15.1",
+        "husky": "^3.0.8",
+        "lint-staged": "^9.4.1",
+        "prettier": "^1.18.2",
+        "prettier-eslint": "^9.0.0",
+        "webpack-cli": "^3.3.9"
+    }
 }
