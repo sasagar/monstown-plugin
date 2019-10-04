@@ -15,10 +15,14 @@ module.exports = {
   globals: {
     wp: true,
     React: true,
+    _: true,
   },
   extends: ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended", "prettier/react"],
   rules: {
     "prettier/prettier": "error",
     "react/jsx-uses-vars": 1,
+    "react/display-name": 0,
+    "react/prop-types": 0,
+    "react/jsx-no-undef": [1, { allowGlobals: true }],
   },
 };
