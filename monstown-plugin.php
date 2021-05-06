@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 Plugin Name: MONSTOWNプラグイン
 Description: MONSTOWN専用ブロックエディタプラグイン
 Author: 4410
